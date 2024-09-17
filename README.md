@@ -42,6 +42,12 @@ Primera pre entrega del modelo 2, Se implementará en el proyecto ecommerce faci
 Dependencias incluidas en el proyecto:
 
   - [express](https://expressjs.com/)
+  - [express-handlebars](https://www.npmjs.com/package/express-handlebars)
+  - [multer](https://www.npmjs.com/package/multer)
+  - [uuid](https://www.npmjs.com/package/uuid)
+  - [mongoose-paginate-v2](https://www.npmjs.com/package/mongoose-paginate-v2)
+  - [socket.io](https://www.npmjs.com/package/socket.io)
+  - [moment](https://www.npmjs.com/package/moment)
   - [nodemon](https://www.npmjs.com/package/nodemon)
   - [bcrypt](https://www.npmjs.com/package/bcrypt)
   - [cookie-parser](https://www.npmjs.com/package/cookie-parser)
