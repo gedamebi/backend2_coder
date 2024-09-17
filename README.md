@@ -20,6 +20,8 @@ Primera pre entrega del modelo 2, Se implementará en el proyecto ecommerce faci
 
 ## Funcionalidades 
 
+- Respecto al commit anterior de este repo, lo integro al proyecto final del modulo 1
+
 - Crear un modelo User con campos especificados
 
 - Encriptar la contraseña del usuario mediante el paquete bcrypt (Utilizar el método “hashSync”).
