@@ -1,7 +1,6 @@
-import passport from 'passport';
-import jwt, { ExtractJwt } from 'passport-jwt';
-import { getJWTCookie } from '../utils.js';
-import { UserModel } from '../models/user.model.js';
+import passport from 'passport'
+import jwt, { ExtractJwt } from 'passport-jwt'
+import { getJWTCookie } from '../utils.js'
 
 const JWTStrategy = jwt.Strategy
 
@@ -11,16 +10,11 @@ const initializePassport = () => {
     secretOrKey: process.env.SECRET
   }, async (payload, done) => {
     try {
-      const userFound = await UserModel.findOne({ email: payload.email }).populate('cart').lean()
-      if (!userFound) {
-        return done(null, false)
-      }
-
-      return done(null, userFound)
+      return done(null, payload)
     } catch (e) {
       return done(e)
     }
   }))
 }
 
-export default initializePassport;
+export default initializePassport

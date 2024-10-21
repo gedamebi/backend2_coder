@@ -1,7 +1,5 @@
-import mongoose, { Schema } from "mongoose";
-import mongoosePaginate from 'mongoose-paginate-v2';
-
-const cartsCollection = 'carts';
+import mongoose, { model, Schema } from "mongoose"
+const cartsCollection = 'carts'
 
 const CartsSchema = new Schema({
     products: {
@@ -17,8 +15,11 @@ const CartsSchema = new Schema({
         }],
         default: []
     },
+    user : {
+        type: String,
+        default : ''
+    }
 })
 
-CartsSchema.plugin(mongoosePaginate);
-
-export const CartsModel = mongoose.model(cartsCollection, CartsSchema);
+const CartsModel = model(cartsCollection, CartsSchema)
+export default CartsModel

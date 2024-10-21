@@ -1,15 +1,13 @@
-import { Router } from "express";
-import { login, register } from "../controllers/user.controller.js";
-import { invokePassport } from "../middlewares/handlerError.js";
+import CustomRouter from "./customRouter.js"
+import { login, logout, register, current } from "../controllers/user.controller.js"
+import { invokePassport } from "../middlewares/handlerError.js"
 
-const route = Router();
+export default class UserRouter extends CustomRouter {
+    init(){
+        this.post('/login', ['PUBLIC'], login)
+        this.delete('/logout', ['USER', 'ADMIN'], logout)
+        this.post('/register', ['PUBLIC'], register)
 
-route.post('/login', login)
-route.post('/register', register)
-
-route.get('/current', invokePassport('jwt'), (req, res) => {
-  console.log("Usuario logueado: ", req.user)
-  res.send('Bienvenido ' + req.user.nombre + ' ' + req.user.apellido)
-})
-
-export default route
+        this.get('/current', ['PUBLIC'], invokePassport('jwt'), current)
+    }
+}
