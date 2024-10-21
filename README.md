@@ -11,6 +11,8 @@ Entrega proyecto final. Se profundizará sobre los roles de los usuarios, las au
     ADMIN   g.medina@macrum.com.uy  123456
 
     Igual se puede generar nuevos usuarios en el / de handlebars. admin solo por postman
+
+    Sugiero crear USER para realizar una compra y ver como le llega el mail
 ---
 
 <br>
