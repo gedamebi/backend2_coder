@@ -4,6 +4,15 @@
 Entrega proyecto final. Se profundizará sobre los roles de los usuarios, las autorizaciones y sobre la lógica de compra.
 ***
 
+---
+### DATOS DE LOGIN DE PRUEBA
+
+    USER    urugerman@gmail.com   123456
+    ADMIN   g.medina@macrum.com.uy  123456
+
+    Igual se puede generar nuevos usuarios en el / de handlebars. admin solo por postman
+---
+
 <br>
 <h2 align="center">Lenguaje y Herramientas</h2>
 <br><br>
@@ -100,15 +109,6 @@ Dependencias incluidas en el proyecto:
 ```
 
 <br><br>
-
----
-### DATOS DE LOGIN DE PRUEBA
-
-    USER    urugerman@gmail.com   123456
-    ADMIN   g.medina@macrum.com.uy  123456
-
-    Igual se puede generar nuevos usuarios en el / de handlebars. admin solo por postman
----
 
 ---
 ### Autor: Germán Medina
