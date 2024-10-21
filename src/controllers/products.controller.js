@@ -8,6 +8,10 @@ export const createProduct = async (req, res) => {
     if (req.files){
         thumbnails = req.files ? req.files.map(file => 'img/' + file.filename) : [];
     }
+
+    if (thumbnails.length === 0){
+        thumbnails.push('img/sin_imagen.png')
+    }
     
     const { title, description, code, price, stock, category } = dataProducto
     if (!title || !description || !code || !price || !stock || !category) {
